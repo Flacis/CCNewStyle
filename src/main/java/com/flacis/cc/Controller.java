@@ -2,6 +2,10 @@ package com.flacis.cc;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -22,22 +26,23 @@ public class Controller {
     private Button convert;
 
     @FXML
-    private ComboBox<?> from;
+    private ComboBox<String> from;
 
     @FXML
-    private ComboBox<?> in;
+    private ComboBox<String> in;
 
     @FXML
     private TextField result;
 
     @FXML
     void initialize() {
-        assert amount != null : "fx:id=\"amount\" was not injected: check your FXML file 'converter-view.fxml'.";
-        assert convert != null : "fx:id=\"convert\" was not injected: check your FXML file 'converter-view.fxml'.";
-        assert from != null : "fx:id=\"from\" was not injected: check your FXML file 'converter-view.fxml'.";
-        assert in != null : "fx:id=\"in\" was not injected: check your FXML file 'converter-view.fxml'.";
-        assert result != null : "fx:id=\"result\" was not injected: check your FXML file 'converter-view.fxml'.";
+        input(from);
+        input(in);
 
     }
 
+    public void input(ComboBox<String> item) {
+        ObservableList<String> list = FXCollections.observableArrayList(Currency.currency);
+        item.setItems(list);
+    }
 }
