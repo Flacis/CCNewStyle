@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+Label{
+-fx-font-size: 70;
+-fx-font-family: 'Lobster', cursive;
+}
