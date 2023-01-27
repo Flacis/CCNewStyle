@@ -4,7 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;
 
 public class Converter {
-    public static String ConverterCurrency(String URL, String search) {
+    public static double ConverterCurrency(String URL, String search) {
         double total = 0;
         try {
             var currency = Jsoup.connect(URL).get();
@@ -13,8 +13,7 @@ public class Converter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String fs = String.valueOf(total);
-        return fs;
+        return total;
     }
 
     public static double converter(Elements n) {

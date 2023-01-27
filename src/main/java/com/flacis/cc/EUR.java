@@ -3,10 +3,11 @@ package com.flacis.cc;
 import static com.flacis.cc.Converter.ConverterCurrency;
 
 public class EUR {
-    public static String EURvsUSD() {
-        return ConverterCurrency(new URLCurrency().EURvsUSD, new URLCurrency().search);
+    public static double USD(double amount) {
+        return ConverterCurrency(new URLCurrency().EURvsUSD, new URLCurrency().search) * amount;
     }
-    public static String EURvsRUB(){
-        return ConverterCurrency(new URLCurrency().EURvsRUB, new URLCurrency().search);
+
+    public static double RUB(double amount) {
+        return ConverterCurrency(new URLCurrency().EURvsRUB, new URLCurrency().search) * amount;
     }
 }
