@@ -3,7 +3,6 @@ package com.flacis.cc;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -20,7 +19,7 @@ public class Controller {
     private URL location;
 
     @FXML
-    private TextField amount;
+    private static TextField amount;
 
     @FXML
     private Button convert;
